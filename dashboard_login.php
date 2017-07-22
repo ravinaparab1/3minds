@@ -5,24 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       $prevQuery = "SELECT * FROM `admin` WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."'";
       $prevResult = $db->query($prevQuery);
       if($prevResult->num_rows == 1){
-        $key = 'Octavia-Andrea-Anghel';
-        $header = [
-                  'typ' => 'JWT',
-                  'alg' => 'HS256'
-        ];
-        $header = json_encode($header);
-        $header = base64_encode($header);
-        $payload = [      
-          "username" => "'".$_POST['username']."'",
-          "password" => "'".$_POST['password']."'"
-      ];
-      $payload = json_encode($header);    
-      $payload = base64_encode($header);
-      $signature = hash_hmac('sha256','$header.$payload', $key, true);
-      $signature = base64_encode($signature); 
-      $token = "$header.$payload.$signature";
-      $_SESSION['token'] = $token;
-      header('Location: dashboard.php');
+        header('Location: dashboard.php');
       }
   }
 }
