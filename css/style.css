@@ -1,0 +1,489 @@
+/*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+ /* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0;padding:0;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body{
+	font-family: 'Rokkitt', serif;
+	font-size:100%;
+	background: url(../images/bg.png) no-repeat;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+/*start-contact-form*/
+.contact-form{
+	background:#fff;
+	padding: 7%;
+	margin-top: 25%;
+	position: relative;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.vertical-center{
+	margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.text-center{
+	text-align: center;
+}
+.platform-select{
+	background: #f1f1f1;
+    border: none;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.wrap{
+	width:41%;
+}
+.contact-form h1{
+	font-size: 1.7em;
+	color:#474646;
+}
+.contact_form ul {
+    list-style-type:none;
+	list-style-position:outside;
+	margin:0px;
+	padding:0px;
+}
+.contact_form li{
+	position:relative;
+} 
+	/* form element visual styles */
+	.contact_form li{ 
+		outline: none;
+		border: 1px solid #DDDDDD;
+		font-size: 1.2em;
+		color: #B6B6B6;
+		width: 100%;
+		font-weight: 600;
+		margin-top: 8%;
+		position: relative;
+		height: 42px;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+		transition: all 0.5s ease-out;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+	}
+	.contact_form li:hover{ 
+		border: 1px solid #79B42B;
+		color:#79B42B;
+	}
+	.contact_form input {
+		float: left;
+		font-size: 1.1em;
+		font-family: 'Rokkitt', serif;
+		padding: 7px 14px;
+		width: 75%;
+		border: none;
+		outline: none;
+		color:#B6B6B6;
+	}
+	.contact_form p {
+		float: right;
+		padding: 8px 7px;
+		width: 9.3%;
+		cursor: pointer;
+	}
+	.contact_form input[type="submit"] {
+		border: none;
+		outline: none;
+		cursor: pointer;
+		color: #fff;
+		background: #79B42B;
+		width: 50%;
+		padding: 12px;
+		font-size: 1.3em;
+		letter-spacing:1px;
+		margin: 8% 25%;
+		transition: all 0.5s ease-out;
+		-webkit-transition: all 0.5s ease-out;
+		-moz-transition: all 0.5s ease-out;
+		-ms-transition: all 0.5s ease-out;
+		-o-transition: all 0.5s ease-out;
+		border-radius: 2px;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		-o-border-radius: 2px;
+	}	
+.contact_form input[type="submit"]:hover {
+	background:#88C470;
+}	
+.contact_form i{
+	font-size: 1.2em;
+	color:#B6B6B6;
+	width: 40%;
+	float: left;
+}
+/* === Form hints === */
+.form_hint {
+	color: #fff;
+	text-align: center;
+	background:#79B42B;
+	border-radius: 3px 3px 3px 3px;
+	font-size:1.2em;
+	margin-left: 8px;
+	padding: 6px 23px;
+	z-index: 999;
+	position: absolute;
+	right:-224px;
+	bottom: 3px;
+	font-weight:100;
+	display: none;
+}
+.form_hint::before {
+	content: '';
+	position: absolute;
+	bottom: 9px;
+	left: -9px;
+	width: 0;
+	height: 0;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #79B42B;
+	border-top: 10px solid transparent;
+}
+.contact_form input:focus + .form_hint {display: inline;}
+.contact_form input:required:valid + .form_hint {color: #000;
+	background: #79B42B;}
+.contact_form input:required:valid + .form_hint::before {color:#28921f;}
+/*end-contact-form*/
+/*start-account*/
+#dashboard_login .account{
+	float:right;
+	width: 45%;
+}
+.account h2 a{
+	color:#71B8E4;
+	display: block;
+	font-size: 1.3em;
+	font-weight: 400;
+	text-align:right;
+	margin-top: 3px;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.account h2 a:hover{
+	color:#79B42B;
+}
+.span {
+	margin-top: 6%;
+	display: block;
+	width: 100%;
+	background: #3B5998;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span img {
+	background:#354F88;
+	padding: 7px;
+	float: left;
+}
+.span i, #dashboard h1 {
+	color: #fff;
+	padding: 9px 14px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span:hover {
+	background:#354F88;
+}
+.span1 {
+	margin-top: 9%;
+	width: 100%;
+	background: #45B0E3;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span1 img {
+	background: #40A2D1;
+	padding: 7px;
+	float: left;
+}
+.span1 i {
+	color: #fff;
+	padding: 9px 20px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span1:hover {
+	background:#40A2D1;
+}
+.span2 {
+	margin-top: 9%;
+	width: 100%;
+	background: #d45870;
+	transition: all 0.5s ease-out;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+}
+.span2 img {
+	background: #de4c68;
+	padding: 7px;
+	float: left;
+}
+.span2 i {
+	color: #fff;
+	padding: 9px 17px;
+	float: left;
+	font-size: 1.6em;
+	font-weight: 400;
+}
+.span2:hover {
+	background: #d45870;
+}
+/*end-account*/
+/*start table*/
+#dashboard-table {
+    border-collapse: collapse; /* Collapse borders */
+    width: 75%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+    bottom: initial;
+    top:200px;
+}
+
+#dashboard-table th, #dashboard-table td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#dashboard-table tr.header, #dashboard-table tr {
+	border-bottom: 1px solid #ddd; 
+    background-color: #f1f1f1;
+}
+
+#dashboard h1{
+	float: none;
+	margin-top: 150px;
+}
+/*end table*/
+/*-----start-responsive-design------*/
+@media only screen and (max-width: 1440px){
+	.span i {
+		font-size: 1.4em;
+	}
+	.span1 i {
+		font-size: 1.4em;
+	}
+	.span2 i {
+		font-size: 1.4em;
+	}
+	.contact_form p {
+		padding: 8px 7px;
+	}
+}
+@media only screen and (max-width: 1366px){
+	.span i {
+		font-size: 1.4em;
+	}
+	.span1 i {
+		font-size: 1.4em;
+	}
+	.span2 i {
+		font-size: 1.4em;
+	}
+	.contact_form p {
+		padding: 8px 3px;
+	}
+}
+@media only screen and (max-width: 1280px){
+	.span i {
+		font-size: 1.3em;
+	}
+	.span1 i {
+		font-size: 1.3em;
+	}
+	.span2 i {
+		font-size: 1.3em;
+	}
+}
+@media only screen and (max-width: 1024px){
+	.span i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+	.span1 i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+	.span2 i {
+		font-size: 1.2em;
+		padding: 13px 14px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.span i {
+		padding: 14px 12px;
+		font-size: 1.2em;
+	}
+	.span1 i {
+		font-size: 1.2em;
+		padding: 13px 20px;
+	}
+	.span2 i {
+		font-size: 1.2em;
+		padding: 13px 20px;
+	}
+	.contact_form {
+		background: url("../images/border.png") no-repeat 313px 77px;
+	}
+	#dashboard-table{
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 640px){
+	.contact-form h1 {
+		font-size: 1.3em;
+	}
+	.contact_form input[type="submit"] {
+		font-size: 1.2em;
+		padding: 10px;
+		margin: 22px 0 30px;
+	}
+	
+	.forgot a {
+		font-size: 1em;
+	}
+	.span i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.span img {
+		padding: 2px;
+	}
+	.span1 img {
+		padding: 2px;
+	}
+	.span1 i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.span2 img {
+		padding: 2px;
+	}
+	.span2 i {
+		padding: 11px 6px;
+		font-size: 1em;
+	}
+	.contact_form {
+		background: url("../images/border.png") no-repeat 247px 41px;
+	}
+	.account h2 a {
+		font-size: 0.9em;
+	}
+
+}
+@media only screen and (max-width: 480px){
+	.wrap{
+		width:75%;
+	}
+	.contact_form {
+		width: 100%;
+		background:none;
+	}
+	.contact_form input[type="submit"] {
+		width: 100%;
+		margin: 22px 0 13px;
+	}
+	.account {
+		width: 100%;
+	}
+	.account h2 a {
+		text-align: left;
+		margin-top: 15px;
+	}
+	.span {
+		margin-top: 3.4%;
+	}
+	.form_hint {
+		font-size: 0.8em;
+		padding: 6px 5px;
+		right: -128px;
+		bottom: 6px;
+	}
+	.form_hint::before {
+		bottom: 5px;
+	}
+}
+@media only screen and (max-width: 320px){
+	.contact_form {
+		width: 100%;
+		background:none;
+	}
+	.contact_form li {
+		width: 99.5%;
+	}
+	.contact_form input[type="submit"] {
+		width: 100%;
+		margin: 22px 0 13px;
+	}
+	.account {
+		width: 100%;
+	}
+	.account h2 a {
+		text-align: left;
+		margin-top: 15px;
+	}
+	.span {
+		margin-top: 3.4%;
+	}
+	.form_hint {
+		font-size: 0.8em;
+		padding: 6px 5px;
+		right: -128px;
+		bottom: 6px;
+	}
+	.form_hint::before {
+		bottom: 5px;
+	}
+}
